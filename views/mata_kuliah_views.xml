@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <!-- List View -->
+        <record model="ir.ui.view" id="mata_kuliah_tree">
+            <field name="name">mata_kuliah.tree</field>
+            <field name="model">mata.kuliah</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="kode"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mata_kuliah_form" model="ir.ui.view">
+                <field name="name">mata.kuliah</field>
+                <field name="model">mata.kuliah</field>
+                <field name="arch" type="xml">
+                    <form string="Matkul">
+                        <sheet>
+                            <group>
+                                <field name="kelas_ids"/>
+                                <field name="name"/>
+                                <field name="kode"/>
+                                <field name="partner_id"/>
+                            </group>
+                        </sheet>
+                    </form>
+                </field>
+            </record>
+
+            <record model="ir.ui.view" id="mata_kuliah_kanban_view">
+            <field name="name">mata.kuliah.kanban</field>
+            <field name="model">mata.kuliah</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                    <field name="kode"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div>
+                                Nama Kelas : <field name="name"/> <br></br>
+                                Wali Kelas : <field name="kode"/> <br></br>
+
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+    </record>
+
+        <record model="ir.actions.act_window" id="mata_kuliah_action">
+            <field name="name">Mata Kuliah</field>
+            <field name="res_model">mata.kuliah</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <menuitem 
+            id="kelas"
+            name="Modul Kelas"
+        />
+
+        <menuitem 
+            id="menu_mata_kuliah"
+            name="Mata Kuliah"
+            parent="kelas"
+        />
+
+        <menuitem 
+            id="submenu_mata_kuliah"
+            name="Daftar Matkul"
+            parent="menu_mata_kuliah"
+
+            action="mata_kuliah_action"
+        />
+    </data>
+</odoo>
