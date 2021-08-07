@@ -1,6 +1,6 @@
 <odoo>
   <data>
-  <!-- Form View -->
+  <!-- Form View Contact-->
     <record model="ir.ui.view" id="view_partner_form">
       <field name="name">res.partner.form</field>
       <field name="model">res.partner</field>

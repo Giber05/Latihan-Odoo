@@ -12,7 +12,7 @@
             "request": "launch",
             "stopOnEntry": false,
             "console": "integratedTerminal",
-            "pythonPath": "D:\\Dev Apps\\Odoo\\python\\python.exe",
+            "python": "D:\\Dev Apps\\Odoo\\python\\python.exe",
             "program": "D:\\Dev Apps\\Odoo\\server\\odoo-bin",
             "args": [
                 "--config=D:\\Dev Apps\\Odoo\\server\\odoo.conf",

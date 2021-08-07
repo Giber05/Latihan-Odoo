@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-    <!-- List View -->
+    <!-- List View Kelas-->
         <record model="ir.ui.view" id="kelas_kelas_tree">
             <field name="name">kelas_kelas.tree</field>
             <field name="model">kelas.kelas</field>
@@ -13,7 +13,7 @@
             </field>
         </record>
 
-    <!-- Form View -->
+    <!-- Form View Kelas-->
         <record id="kelas_form" model="ir.ui.view">
                 <field name="name">kelas.kelas</field>
                 <field name="model">kelas.kelas</field>
@@ -22,11 +22,7 @@
                         <sheet>
                             <group>
                                 <field name="name"/>
-                                <field name="partner_id">
-                                    <tree editable="bottom">
-                                        <field name="name"/>
-                                    </tree>
-                                </field>
+                                <field name="partner_id"/>
                                 <field name="wali_kelas"/>
                                 <field name="matkul_ids"/>
                             </group>
@@ -35,7 +31,7 @@
                 </field>
             </record>
 
-        <!-- Kanban View -->
+        <!-- Kanban View Kelas-->
         <record model="ir.ui.view" id="kelas_kanban_view">
             <field name="name">kelas.kanban</field>
             <field name="model">kelas.kelas</field>
@@ -56,6 +52,7 @@
             </field>
     </record>
 
+        <!-- Action Kelas -->
         <record model="ir.actions.act_window" id="kelas_kelas_action">
             <field name="name">Kelas</field>
             <field name="res_model">kelas.kelas</field>
@@ -79,6 +76,7 @@
             
         </record>
 
+        <!-- Navigation Menu -->
         <menuitem 
             id="kelas"
             name="Modul Kelas"
@@ -104,6 +102,8 @@
             parent="contacts.menu_contacts"
             action="dosen_action"
         />
+
+        <!-- Navbar Kontak Mahasiswa di Contact -->
         <menuitem 
             id="partner_mahasiswa"
             name="Kontak Mahasiswa"

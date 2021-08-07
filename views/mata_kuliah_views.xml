@@ -2,7 +2,7 @@
 <odoo>
     <data>
 
-    <!-- List View -->
+    <!-- List View Mata Kuliah-->
         <record model="ir.ui.view" id="mata_kuliah_tree">
             <field name="name">mata_kuliah.tree</field>
             <field name="model">mata.kuliah</field>
@@ -14,6 +14,7 @@
             </field>
         </record>
 
+    <!-- Form View Mata Kuliah -->
         <record id="mata_kuliah_form" model="ir.ui.view">
                 <field name="name">mata.kuliah</field>
                 <field name="model">mata.kuliah</field>
@@ -31,6 +32,7 @@
                 </field>
             </record>
 
+    <!-- Kanban View MataKuliah -->
             <record model="ir.ui.view" id="mata_kuliah_kanban_view">
             <field name="name">mata.kuliah.kanban</field>
             <field name="model">mata.kuliah</field>
@@ -51,12 +53,14 @@
             </field>
     </record>
 
+<!-- Action  -->
         <record model="ir.actions.act_window" id="mata_kuliah_action">
             <field name="name">Mata Kuliah</field>
             <field name="res_model">mata.kuliah</field>
             <field name="view_mode">kanban,tree,form</field>
         </record>
 
+<!-- Navigation Menu -->
         <menuitem 
             id="kelas"
             name="Modul Kelas"
