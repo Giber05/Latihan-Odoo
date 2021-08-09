@@ -17,8 +17,7 @@
             "args": [
                 "--config=D:\\Dev Apps\\Odoo\\server\\odoo.conf",
                 // "--database=tutor1,tutor2",
-                // "--update=nama_folder1,nama_folder2"
-                "--update=latihan_odoo"
+                "--update=latihan_gilang"
             ]
         }
     ]

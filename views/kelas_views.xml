@@ -41,7 +41,7 @@
                     <field name="wali_kelas"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div>
+                            <div class="oe_kanban_card oe_kanban_global_click">
                                 Nama Kelas : <field name="name"/> <br></br>
                                 Wali Kelas : <field name="wali_kelas"/> <br></br>
 

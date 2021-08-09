@@ -10,6 +10,7 @@
                 <tree>
                     <field name="name"/>
                     <field name="kode"/>
+                    <field name="partner_id"/>
                 </tree>
             </field>
         </record>
@@ -40,11 +41,13 @@
                 <kanban>
                     <field name="name"/>
                     <field name="kode"/>
+                    <field name="partner_id"/>
                     <templates>
                         <t t-name="kanban-box">
-                            <div>
-                                Nama Kelas : <field name="name"/> <br></br>
-                                Wali Kelas : <field name="kode"/> <br></br>
+                            <div class="oe_kanban_card oe_kanban_global_click">
+                                Nama Matkul : <field name="name"/> <br></br>
+                                Kode Matkul : <field name="kode"/> <br></br>
+                                Dosen Pengampu : <field name="partner_id"/> <br></br>
 
                             </div>
                         </t>

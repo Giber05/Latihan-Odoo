@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="contact_template">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.internal_layout">
+                    <div class="page">
+                        <p><center> <img width="300" t-if="doc.image_1920" t-att-src="image_data_uri(doc.image_1920)" alt="contact"/> </center> </p>
+                        <p>Nama: <t t-esc="doc.name"/> </p>
+                        <p>age: <t t-esc="doc.age"/> </p>
+                        <p>kelas: <t t-esc="doc.kelas_id.name"/> </p>
+                        <table class="table table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>Mata Kuliah</th>
+                                    <th>Kode Matkul</th>
+                                    <th>Dosen Pengampu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="doc.kelas_id.matkul_ids" t-as="matkul">
+                                    <td><t t-esc="matkul.name" /></td>
+                                    <td><t t-esc="matkul.kode" /></td>
+                                    <td><t t-esc="matkul.partner_id.name" /></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','contacts'],
 
     # always loaded
     'data': [
@@ -30,6 +30,8 @@
         'views/kelas_views.xml',
         'views/mata_kuliah_views.xml',
         'views/mata_kuliah_views.xml',
+        'reports/report_contact.xml',
+        'reports/contact_templates.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

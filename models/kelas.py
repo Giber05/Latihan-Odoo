@@ -19,4 +19,5 @@ class Kelas(models.Model):
         comodel_name='mata.kuliah', 
         string='Mata Kuliah'
     )
+
     
